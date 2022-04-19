@@ -4,7 +4,7 @@
     <string name="falso">Falso</string>
     <string name="texto_acertou">Você acertou!</string>
     <string name="texto_errou">Você errou!</string>
-    <string name="texto_botao_proximo">Proximo</string>
+    <string name="texto_botao_proximo">Próximo</string>
 
     <string name="afirmacao_terra_plana">A Terra é plana.</string>
     <string name="afirmacao_linux">Linux Is Not UniX.</string>
