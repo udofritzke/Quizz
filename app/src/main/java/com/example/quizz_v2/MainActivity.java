@@ -23,6 +23,9 @@ import java.util.List;
        "errou" quando se pressiona Falso
     5- (resolvido: comunicação via bd ao inves de intents) como verificar se a act veio de uma inicialização do app ou de uma outra act
  */
+
+/* commit 2022-2 a */
+
 public class MainActivity<mudaParaCadastroActivity> extends AppCompatActivity {
     private TextView mTextViewAfirmacao;
     private Button mBotaoVerdadeiro;
