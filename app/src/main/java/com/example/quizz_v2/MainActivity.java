@@ -15,18 +15,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-/* A fazer:
-    1- (resolvido)) Quando retorna da tela de cadastro após remover o banco o app falha
-    2- (resolvido) quando vai para a activity de cadastro (mudaParaCadastroActivity()) sem passar uma lista como intent o app falha
-    3- (resolvido) app falha quando se navega na main act sem questões cadastradas
-    4- (resolvido) Verificação da correção da resposta sempre retorna "acertou" quando se pressiona Verdadeiro e
-       "errou" quando se pressiona Falso
-    5- (resolvido: comunicação via bd ao inves de intents) como verificar se a act veio de uma inicialização do app ou de uma outra act
- */
+/* commit 2022-2 c */
+/* https://github.com/udofritzke/Quizz */
 
-/* commit 2022-2 b */
-
-public class MainActivity<mudaParaCadastroActivity> extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     private TextView mTextViewAfirmacao;
     private Button mBotaoVerdadeiro;
     private Button mBotaoFalso;
@@ -41,10 +33,6 @@ public class MainActivity<mudaParaCadastroActivity> extends AppCompatActivity {
         mIndiceQuestaoAtual = 0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //Comunicação entre activities via bd (não via intents)
-        //Intent intent = getIntent();
-        //mListaQuestoes = (ListaQuestoes) intent.getSerializableExtra("questoes");
 
         boolean haQuestoes = buscaQuestoesNoBD();
         apresentaBotoes(haQuestoes);

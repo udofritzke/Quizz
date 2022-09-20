@@ -21,33 +21,10 @@ public class CadastroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        //Intent intent = getIntent();
-        //mListaQuestoes = (ListaQuestoes) intent.getSerializableExtra("questoes");
-        //Lista de questões virá apenas no sentido cadastro->main
         mListaQuestoes = new ListaQuestoes();
     }
 
     public void mudaParaMainActivity(View v) {
-        //Comunicação entre acts via bd (não via intents)
-        /*
-        ListaQuestoes listaQuestoes = new ListaQuestoes();
-        if (mQuestoesDb == null) {
-            mQuestoesDb = new QuestaoDB(getBaseContext());
-        }
-        Cursor cursor = mQuestoesDb.queryQuestao(null, null);
-
-        if (cursor != null) {
-            cursor.moveToFirst();
-            while (cursor.isAfterLast() == false) {
-                String questao = cursor.getString(3);
-                listaQuestoes.addQuestao(new Questao(questao, true));
-                cursor.moveToNext();
-                Log.d("cadastro", questao);
-            }
-        }
-        Intent intent = new Intent(this, MainActivity.class);
-        intent.putExtra("questoes", listaQuestoes);
-        */
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
